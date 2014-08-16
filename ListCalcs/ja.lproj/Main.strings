@@ -1,0 +1,18 @@
+
+/* Class = "IBUILabel"; text = "Click Sound"; ObjectID = "E62-Uw-4kz"; */
+"E62-Uw-4kz.text" = "クリック音";
+
+/* Class = "IBUINavigationItem"; title = "設定"; ObjectID = "Lgs-0C-3p7"; */
+"Lgs-0C-3p7.title" = "設定";
+
+/* Class = "IBUITextField"; placeholder = "memo"; ObjectID = "PhT-d4-Lny"; */
+"PhT-d4-Lny.placeholder" = "memo";/*セル*/
+
+/* Class = "IBUILabel"; text = "Memo"; ObjectID = "aaF-1n-Zgh"; */
+"aaF-1n-Zgh.text" = "メモの表示";/*設定画面*/
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "j14-wh-CxX"; */
+"j14-wh-CxX.text" = "0";
+
+/* Class = "IBUINavigationItem"; title = "List-Calcs"; ObjectID = "szS-dU-FOU"; */
+"szS-dU-FOU.title" = "List Calcs";

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3ki-En-C9E" customClass="CalcKeyboardView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXl-G0-nEN">
+                    <rect key="frame" x="4" y="44" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="7_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="7_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="7_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="z09-HS-OaS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="599-D5-Zt2">
+                    <rect key="frame" x="83" y="44" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="8_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="8_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="8_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="n67-H4-eUU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RG-oS-MR2">
+                    <rect key="frame" x="162" y="44" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="9_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="9_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="9_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="vsb-e4-eyY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFn-L2-Ory">
+                    <rect key="frame" x="241" y="44" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Div_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="Div_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Div_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushDivisionButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="5tm-Nb-rpZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SG5-IG-bEs">
+                    <rect key="frame" x="4" y="85" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="4_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="4_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="4_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="wYa-pb-iza"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVi-xn-cLH">
+                    <rect key="frame" x="83" y="85" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="5_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="5_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="5_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="Q9v-7u-N92"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbT-7r-dd3">
+                    <rect key="frame" x="162" y="85" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="6_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="6_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="6_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="Wk9-KF-ZpY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K18-dH-fkZ">
+                    <rect key="frame" x="241" y="85" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Mul_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="Mul_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Mul_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushMultiplicationButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="hkd-xO-dwa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-qu-aqt">
+                    <rect key="frame" x="4" y="126" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="1_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="1_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="1_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="v2b-No-lhg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-Eb-FTz">
+                    <rect key="frame" x="83" y="126" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="2_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="2_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="2_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="Jkp-JN-eLu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75b-Ul-37P">
+                    <rect key="frame" x="162" y="126" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="3_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="3_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="3_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="nji-uU-2kY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHn-aO-T4w">
+                    <rect key="frame" x="241" y="126" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Sub_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="Sub_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Sub_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushSubtractionButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="Uau-oc-88m"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60G-yx-Zbb">
+                    <rect key="frame" x="4" y="167" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="1"/>
+                    <state key="normal" backgroundImage="0_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="0_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="0_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushNumberButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="Wbe-eB-HU8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjP-m8-otX">
+                    <rect key="frame" x="83" y="167" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="DecimalPoint_button_@3_5.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="DecimalPoint_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="DecimalPoint_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushDecimalPointButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="QGH-bt-ag2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szr-CN-AeX">
+                    <rect key="frame" x="4" y="3" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="AC_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="AC_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="AC_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushClearButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="jJq-Zr-MHx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM4-Aq-bxq">
+                    <rect key="frame" x="241" y="167" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Add_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="Add_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Add_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushAddButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="HII-vp-qXx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRt-Sf-vMC">
+                    <rect key="frame" x="162" y="167" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Equal_button_@3_5.png"/>
+                    <state key="selected" backgroundImage="Equal_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Equal_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushEqualButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="xWo-Af-hSs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIY-mP-TuZ">
+                    <rect key="frame" x="83" y="3" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Delete_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="Delete_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Delete_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushDeleteButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="sya-pS-2J0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-VL-VbC">
+                    <rect key="frame" x="162" y="3" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="Percent_button_@3_5.png"/>
+                    <state key="selected" backgroundImage="Percent_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="Percent_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushPercentButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="I04-b2-528"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-Lh-j4h">
+                    <rect key="frame" x="241" y="3" width="75" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" backgroundImage="PlusMinus_button_@3_5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="PlusMinus_button_selected_@3_5.png"/>
+                    <state key="highlighted" backgroundImage="PlusMinus_button_selected_@3_5.png"/>
+                    <connections>
+                        <action selector="pushPlusMinusButton:" destination="3ki-En-C9E" eventType="touchUpInside" id="fgX-dP-fut"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="clearButton" destination="szr-CN-AeX" id="Sxv-x9-vI1"/>
+                <outlet property="decimalSeparatorButton" destination="RjP-m8-otX" id="EbI-AO-Y1d"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="0_button_@3_5.png" width="155" height="78"/>
+        <image name="0_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="1_button_@3_5.png" width="154" height="78"/>
+        <image name="1_button_selected_@3_5.png" width="154" height="84"/>
+        <image name="2_button_@3_5.png" width="155" height="84"/>
+        <image name="2_button_selected_@3_5.png" width="155" height="84"/>
+        <image name="3_button_@3_5.png" width="155" height="78"/>
+        <image name="3_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="4_button_@3_5.png" width="155" height="78"/>
+        <image name="4_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="5_button_@3_5.png" width="154" height="78"/>
+        <image name="5_button_selected_@3_5.png" width="154" height="78"/>
+        <image name="6_button_@3_5.png" width="154" height="78"/>
+        <image name="6_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="7_button_@3_5.png" width="154" height="78"/>
+        <image name="7_button_selected_@3_5.png" width="154" height="78"/>
+        <image name="8_button_@3_5.png" width="154" height="78"/>
+        <image name="8_button_selected_@3_5.png" width="154" height="78"/>
+        <image name="9_button_@3_5.png" width="155" height="77"/>
+        <image name="9_button_selected_@3_5.png" width="156" height="77"/>
+        <image name="AC_button_@3_5.png" width="155" height="77"/>
+        <image name="AC_button_selected_@3_5.png" width="156" height="77"/>
+        <image name="Add_button_@3_5.png" width="155" height="77"/>
+        <image name="Add_button_selected_@3_5.png" width="155" height="77"/>
+        <image name="DecimalPoint_button_@3_5.png" width="154" height="79"/>
+        <image name="DecimalPoint_button_selected_@3_5.png" width="154" height="80"/>
+        <image name="Delete_button_@3_5.png" width="154" height="77"/>
+        <image name="Delete_button_selected_@3_5.png" width="154" height="77"/>
+        <image name="Div_button_@3_5.png" width="155" height="77"/>
+        <image name="Div_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="Equal_button_@3_5.png" width="154" height="77"/>
+        <image name="Equal_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="Mul_button_@3_5.png" width="155" height="77"/>
+        <image name="Mul_button_selected_@3_5.png" width="155" height="78"/>
+        <image name="Percent_button_@3_5.png" width="154" height="77"/>
+        <image name="Percent_button_selected_@3_5.png" width="155" height="77"/>
+        <image name="PlusMinus_button_@3_5.png" width="154" height="77"/>
+        <image name="PlusMinus_button_selected_@3_5.png" width="155" height="77"/>
+        <image name="Sub_button_@3_5.png" width="154" height="77"/>
+        <image name="Sub_button_selected_@3_5.png" width="155" height="78"/>
+    </resources>
+</document>
