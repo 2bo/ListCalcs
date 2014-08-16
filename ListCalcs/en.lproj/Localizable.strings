@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  ListCalc
+
+  Created by Kota_Nakatsubo on 2014/08/03.
+  Copyright (c) 2014年 Kota_Nakatsubo. All rights reserved.
+*/
+Sum = "SUM";
+Average = "AVE";
+Copy = "Copy";
+Paste = "Paste";
+Cancellation_Confirmed = "Are you sure want to clear all data ?";
+Clear_All = "Clear all";
+Cancel = "Cancel";
+
+
