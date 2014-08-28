@@ -24,19 +24,13 @@
 	NSMutableArray *queue;
 	CalcOperator konstantCalcOperator; //定数計算用の演算子格納用
 	NSDecimalNumber *konstant; //定数計算の定数格納用
-    NSString *decimalSeparator; //小数点
+	NSString *decimalSeparator; //小数点
 }
 
 - (id)init {
 	if (self = [super init]) {
-		/*self.calcStatus = StatusNumberInput;
-		self.isClear = YES;
-		konstant = nil;
-		konstantCalcOperator = OperatorNone;*/
 		[self resetCalc];
-        /*NSNumberFormatter *formatter =  [[NSNumberFormatter alloc]init];
-        [formatter setLocale:[NSLocale currentLocale]];*/
-        decimalSeparator = DECIMAL_SEPARATOR;
+		decimalSeparator = DECIMAL_SEPARATOR;
 	}
 	return self;
 }
@@ -49,12 +43,12 @@
 		case StatusNumberInput:
 
 			//13桁以上、もしくは少数点第12位以下の数値入力は受け付けない
-			if (12 <= [self.displayString length]) { //FIXME:数字直打ち
+			if (12 <= [self.displayString length]) { //(F)数字直打ち
 				NSRange searchResult = [self.displayString rangeOfString:decimalSeparator]; //小数点を検索
 				if (searchResult.location == NSNotFound) {
 					break;
 				}
-				else if (13 <= [self.displayString length]) {  //FIXME:数字直打ち
+				else if (13 <= [self.displayString length]) {  //(F)数字直打ち
 					break;
 				}
 			}
@@ -81,9 +75,6 @@
 		default:
 			break;
 	}
-	//self.operand = [NSDecimalNumber decimalNumberWithString:self.displayString]; //文字列を10進数に変換
-	//self.displayString = operandString;
-	//self.displayNumber = self.operand;
 
 	self.calcStatus = StatusNumberInput; //数値入力状態へ遷移
 	self.isClear = NO;
@@ -122,8 +113,8 @@
 
 		case StatusOpereterInput:
 		{
-			self.displayString = [NSMutableString stringWithString:@"0"];//一桁目になるので、入力された数字をそのまま文字列に変換
-            [self.displayString appendString:decimalSeparator];
+			self.displayString = [NSMutableString stringWithString:@"0"]; //一桁目になるので、入力された数字をそのまま文字列に変換
+			[self.displayString appendString:decimalSeparator];
 		}
 
 		break;
@@ -132,7 +123,7 @@
 		{
 			[self resetCalc];
 			self.displayString = [NSMutableString stringWithString:@"0"]; //一桁目になるので、入力された数字をそのまま文字列に変換
-            [self.displayString appendString:decimalSeparator];
+			[self.displayString appendString:decimalSeparator];
 		}
 		break;
 
@@ -149,22 +140,71 @@
  */
 - (void)inputOperator:(CalcOperator)inputedOperator {
 	switch (self.calcStatus) {
+		case StatusOpereterInput:
+            
+			[queue pop]; //スタックから演算子をPOP
+            
+            if ([queue count] >= 3) {
+				NSMutableArray *copyStack = [queue mutableCopy]; //キューのコピー
+				id obj;
+                
+				while ([copyStack count] > 0) {
+					obj = [copyStack pop];
+					if (![obj isMemberOfClass:[NSDecimalNumber class]] && [obj isKindOfClass:[NSNumber class]]) { //前回入力された演算子を取り出す
+						break;
+					}
+				}
+				if ([self comparePriorityOperatorA:[NSNumber numberWithInteger:inputedOperator] toOperatorB:obj] < 1) {
+					//演算子が×,÷の場合
+					if (inputedOperator == OperatorMultiplication || inputedOperator == OperatorDivision) {
+						copyStack = [queue mutableCopy];
+						id obj;
+						NSInteger i = 0;
+                        
+						//入力された式の演算子が+,-になるまでさかのぼる
+						for (i = [copyStack count]; i > 0; i--) {
+							obj = [copyStack objectAtIndex:i - 1];
+							if (![obj isMemberOfClass:[NSDecimalNumber class]] && [obj isKindOfClass:[NSNumber class]]) {
+								if ([self comparePriorityOperatorA:[NSNumber numberWithInteger:inputedOperator] toOperatorB:obj] != 0) {
+									break;
+								}
+							}
+						}
+                        
+						[copyStack removeObjectsInRange:NSMakeRange(0, i)];
+						NSMutableArray *reversPolish = [self convertInfixToReversePolish:copyStack];
+						NSDecimalNumber *result = [self calculateFromReversePolish:reversPolish];
+                        
+						if ([result isEqual:[NSDecimalNumber notANumber]]) {
+							[self.displayString setString:ERROR_MESSAGE];
+						}
+						else {
+							[self.displayString setString:[result stringValue]];
+						}
+					}
+					else {
+						NSMutableArray *revershPolish = [self convertInfixToReversePolish:queue];
+						NSDecimalNumber *result = [self calculateFromReversePolish:revershPolish];
+						if ([result isEqual:[NSDecimalNumber notANumber]]) {
+							[self.displayString setString:ERROR_MESSAGE];
+						}
+						else {
+							[self.displayString setString:[result stringValue]];
+						}
+					}
+				}
+                else{
+                    NSDecimalNumber *number = [queue objectAtIndex:[queue count] - 1];
+                    [self.displayString setString:[number stringValue]];
+                }
+			}
+            break;
+
 		case StatusNumberInput: {
-			//[queue enqueue:self.operand]; //スタックに被演算子をenqueue
-
-			/*if ([self.displayString hasSuffix:decimalSeparator]) { //少数点以下が入力されていないなら、小数点を削除する
-				[self.displayString deleteCharactersInRange:NSMakeRange([self.displayString length] - 1, 1)];
-			}*/
-            
-            /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-            [formatter setLocale:[NSLocale currentLocale]];
-            NSString *groupingSeparator = [formatter groupingSeparator];
-            
-            [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];
-
-			NSDecimalNumber *operand = [NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]];*/
-            NSDecimalNumber *operand = [self requestDisplayNumber];
-			[queue enqueue:operand];
+	
+				NSDecimalNumber *operand = [self requestDisplayNumber];
+				[queue enqueue:operand];
+			
 
 			//演算子の入力が2回目以降の場合
 			if ([queue count] >= 3) {
@@ -178,33 +218,31 @@
 					}
 				}
 				if ([self comparePriorityOperatorA:[NSNumber numberWithInteger:inputedOperator] toOperatorB:obj] < 1) {
-                    
-                    //演算子が×,÷の場合
+					//演算子が×,÷の場合
 					if (inputedOperator == OperatorMultiplication || inputedOperator == OperatorDivision) {
-                        
-                        copyStack = [queue mutableCopy];
-                        id obj;
-                        NSInteger i = 0;
-                        
-                        //入力された式の演算子が+,-になるまでさかのぼる
-                        for(i = [copyStack count]; i > 0 ; i--){
-                            obj = [copyStack objectAtIndex:i - 1];
-                            if(![obj isMemberOfClass:[NSDecimalNumber class]] && [obj isKindOfClass:[NSNumber class]]){
-                                if([self comparePriorityOperatorA:[NSNumber numberWithInteger:inputedOperator] toOperatorB:obj] != 0){
-                                    break;
-                                }
-                            }
-                        }
-                        
-                        [copyStack removeObjectsInRange:NSMakeRange(0, i)];
-                        NSMutableArray *reversPolish = [self convertInfixToReversePolish:copyStack];
-                        NSDecimalNumber *result = [self calculateFromReversePolish:reversPolish];
-                        
+						copyStack = [queue mutableCopy];
+						id obj;
+						NSInteger i = 0;
+
+						//入力された式の演算子が+,-になるまでさかのぼる
+						for (i = [copyStack count]; i > 0; i--) {
+							obj = [copyStack objectAtIndex:i - 1];
+							if (![obj isMemberOfClass:[NSDecimalNumber class]] && [obj isKindOfClass:[NSNumber class]]) {
+								if ([self comparePriorityOperatorA:[NSNumber numberWithInteger:inputedOperator] toOperatorB:obj] != 0) {
+									break;
+								}
+							}
+						}
+
+						[copyStack removeObjectsInRange:NSMakeRange(0, i)];
+						NSMutableArray *reversPolish = [self convertInfixToReversePolish:copyStack];
+						NSDecimalNumber *result = [self calculateFromReversePolish:reversPolish];
+
 						if ([result isEqual:[NSDecimalNumber notANumber]]) {
 							[self.displayString setString:ERROR_MESSAGE];
 						}
 						else {
-                            [self.displayString setString:[result stringValue]];
+							[self.displayString setString:[result stringValue]];
 						}
 					}
 					else {
@@ -214,7 +252,7 @@
 							[self.displayString setString:ERROR_MESSAGE];
 						}
 						else {
-                            [self.displayString setString:[result stringValue]];
+							[self.displayString setString:[result stringValue]];
 						}
 					}
 				}
@@ -222,26 +260,19 @@
 		}
 		break;
 
-		case StatusOpereterInput:
-			[queue pop]; //スタックから演算子をPOP
-			break;
+
 
 		case StatusResultDisplayed:
-        {
+		{
 			queue = [[NSMutableArray alloc] init];
-			//[queue enqueue:self.displayNumber]; //スタックに被演算子をenqueue
+
 			if ([self.displayString isEqualToString:ERROR_MESSAGE]) {
 				[self.displayString setString:@"0"];
 			}
-            /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-            [formatter setLocale:[NSLocale currentLocale]];
-            NSString *groupingSeparator = [formatter groupingSeparator];
-            [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];
-            
-			[queue enqueue:[NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]]];*/
-            [queue enqueue:[self requestDisplayNumber]];
-        }
-			break;
+
+			[queue enqueue:[self requestDisplayNumber]];
+		}
+		break;
 
 		default:
 			break;
@@ -261,11 +292,6 @@
    「=」が入力された時の処理
  */
 - (void)inputEqual {
-	//[queue enqueue:self.operand]; //スタックに被演算子をenqueue
-	/*if ([self.displayString hasSuffix:decimalSeparator]) { //少数点以下が入力されていないなら、小数点を削除する
-		[self.displayString deleteCharactersInRange:NSMakeRange([self.displayString length] - 1, 1)];
-	}*/
-
 	switch (self.calcStatus) {
 		case StatusNumberInput:
 		{
@@ -275,12 +301,7 @@
 				}
 				else {
 					//定数計算
-                    /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    [formatter setLocale:[NSLocale currentLocale]];
-                    NSString *groupingSeparator = [formatter groupingSeparator];
-                    [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];
-					[queue enqueue:[NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]]];*/
-                    [queue enqueue:[self requestDisplayNumber]];
+					[queue enqueue:[self requestDisplayNumber]];
 					[queue enqueue:[NSNumber numberWithInteger:konstantCalcOperator]];
 					[queue enqueue:konstant];
 				}
@@ -288,17 +309,7 @@
 			else {
 				//定数を保持
 				konstant = [self requestDisplayNumber];
-                
-                /*[NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]];*/
-				
-                //通常の計算
-                /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                [formatter setLocale:[NSLocale currentLocale]];
-                NSString *groupingSeparator = [formatter groupingSeparator];
-                [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];
-                
-				NSDecimalNumber *operand = [NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]];*/
-                NSDecimalNumber *operand = [self requestDisplayNumber];
+				NSDecimalNumber *operand = [self requestDisplayNumber];
 				[queue enqueue:operand];
 			}
 
@@ -309,11 +320,6 @@
 				[self.displayString setString:ERROR_MESSAGE];
 			}
 			else {
-				/*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                [formatter setNumberStyle:NSNumberFormatterNoStyle];
-                formatter.numberStyle = NSNumberFormatterDecimalStyle;
-                [formatter setLocale:[NSLocale currentLocale]];
-                [formatter setMaximumFractionDigits:12];*/
 				[self.displayString setString:[result stringValue]];
 			}
 			break;
@@ -321,16 +327,9 @@
 
 		case StatusOpereterInput:
 		{
-            /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-            [formatter setLocale:[NSLocale currentLocale]];
-            NSString *groupingSeparator = [formatter groupingSeparator];
-			
-             [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];
-            
-            //定数を保持
-			konstant = [NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]];*/
-            konstant = [self requestDisplayNumber];
-            
+			//定数を保持
+			konstant = [self requestDisplayNumber];
+
 			[queue enqueue:konstant];
 			NSMutableArray *revershPolish = [self convertInfixToReversePolish:queue];
 			NSDecimalNumber *result = [self calculateFromReversePolish:revershPolish];
@@ -351,12 +350,7 @@
 			}
 
 			queue = [[NSMutableArray alloc] init];
-           /* NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-            [formatter setLocale:[NSLocale currentLocale]];
-            NSString *groupingSeparator = [formatter groupingSeparator];
-            [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];
-			[queue enqueue:[NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]]];*/
-            [queue enqueue:[self requestDisplayNumber]];
+			[queue enqueue:[self requestDisplayNumber]];
 			[queue enqueue:[NSNumber numberWithInteger:konstantCalcOperator]];
 			[queue enqueue:konstant];
 
@@ -376,7 +370,7 @@
 			break;
 	}
 	self.calcStatus = StatusResultDisplayed;
-    self.isClear = NO;
+	self.isClear = NO;
 }
 
 /***
@@ -418,8 +412,8 @@
 			NSDecimalNumber *number = [self requestDisplayNumber];
 			NSDecimalNumber *oneHundred = [NSDecimalNumber decimalNumberWithMantissa:100 exponent:0 isNegative:NO];
 			//100で割った値にする
-            NSDecimalNumber *result = [number decimalNumberByDividingBy:oneHundred];
-            [self.displayString setString:[result stringValue]];
+			NSDecimalNumber *result = [number decimalNumberByDividingBy:oneHundred];
+			[self.displayString setString:[result stringValue]];
 		}
 		break;
 
@@ -439,8 +433,8 @@
 			NSDecimalNumber *number = [self requestDisplayNumber];
 			NSDecimalNumber *negativeOne = [NSDecimalNumber decimalNumberWithMantissa:1 exponent:0 isNegative:YES];
 			//-1を掛けた値にする
-            NSDecimalNumber *result = [number decimalNumberByMultiplyingBy:negativeOne];
-            [self.displayString setString:[result stringValue]];
+			NSDecimalNumber *result = [number decimalNumberByMultiplyingBy:negativeOne];
+			[self.displayString setString:[result stringValue]];
 		}
 		break;
 
@@ -459,27 +453,27 @@
 				[self resetCalc];
 			}
 			else { //clear
-				   //operandString = [NSMutableString stringWithString:@"0"];
 				self.displayString = [NSMutableString stringWithString:@"0"];
 				self.isClear = YES;
 			}
 			break;
 
 		case StatusOpereterInput:
-            if (self.isClear) { //All clear
+			if (self.isClear) { //All clear
 				[self resetCalc];
 			}
 			break;
 
 		case StatusResultDisplayed:
-			//operandString = [NSMutableString stringWithString:@"0"];
+
 			if (self.isClear) { //All clear
 				[self resetCalc];
-			}else{
-                self.displayString = [NSMutableString stringWithString:@"0"];
+			}
+			else {
+				self.displayString = [NSMutableString stringWithString:@"0"];
 				self.isClear = YES;
-                self.calcStatus = StatusNumberInput;
-            }
+				self.calcStatus = StatusNumberInput;
+			}
 			break;
 
 		default:
@@ -585,7 +579,7 @@
 
 /***
  *演算子の優先順位を比較するメソッド
- ****************優先度: (×,÷ >>> +,-)
+ *****************優先度: (×,÷ >>> +,-)
  * A=B  0を返す
  * A>B  1を返す
  * A<B -1を返す
@@ -696,64 +690,50 @@
 	if ([self.displayString isEqualToString:ERROR_MESSAGE]) {
 		return ERROR_MESSAGE;
 	}
-    /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setLocale:[NSLocale currentLocale]];*/
-    /*NSString *groupingSeparator = [formatter groupingSeparator];
-    
-    [self.displayString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[self.displayString length])];*/
 
 	if (![self.displayString hasSuffix:decimalSeparator]) {
 		NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-        [formatter setLocale:[NSLocale currentLocale]];
-    
-        NSMutableString *numberString = [NSMutableString stringWithString:self.displayString];
-        /*NSString *groupingSeparator = [formatter groupingSeparator];
-        [numberString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[numberString length])];*/
-        
-        //NSLog(@"self.displaystring %@",self.displayString);
-        
-     //   NSDictionary *localeDict = [NSDictionary dictionaryWithObject:decimalSeparator forKey:NSLocaleDecimalSeparator];
+		[formatter setLocale:[NSLocale currentLocale]];
+
+		NSMutableString *numberString = [NSMutableString stringWithString:self.displayString];
+
 		NSDecimalNumber *decimalNumber = [NSDecimalNumber decimalNumberWithString:numberString];
-        
-        //NSDecimalNumber *operand = [NSDecimalNumber decimalNumberWithString:self.displayString locale:[NSLocale currentLocale]];
-   
+
 		NSDecimalNumber *absoluteValue = [CalcModel abs:decimalNumber];
-        
+
 		if (NSOrderedSame == [absoluteValue compare:[NSDecimalNumber zero]]) {
 			return self.displayString;
 		}
-		else if (NSOrderedDescending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:999999999999]] || NSOrderedAscending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:0.000000000001]]) { //FIXME:数字直打ち
+		else if (NSOrderedDescending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:999999999999]] || NSOrderedAscending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:0.000000000001]]) { //(F):数字直打ち
 			// NSNumberを科学形式(E)に変換
 			[formatter setMaximumFractionDigits:6];
 			formatter.numberStyle = NSNumberFormatterScientificStyle;
-            return [formatter stringFromNumber:decimalNumber];
+			return [formatter stringFromNumber:decimalNumber];
 		}
 		else {
 			// NSNumberを3桁区切りに変換
 			[formatter setMaximumFractionDigits:12];
 			formatter.numberStyle = NSNumberFormatterDecimalStyle;
-            
-            //小数点以下の最後が0で終わる数字の表示(例:1.000)
-            if(self.calcStatus == StatusNumberInput && [self.displayString hasSuffix:@"0"] && [self.displayString rangeOfString:decimalSeparator].location != NSNotFound){
-                
-                //小数点の表示ケタを調整
-                NSUInteger minimunFractionDigits =  [self.displayString length] - [self.displayString rangeOfString:decimalSeparator options:NSBackwardsSearch].location - 1 ;
-                [formatter setMinimumFractionDigits:minimunFractionDigits];
-            }
-            NSString *formattedNumber = [formatter stringFromNumber:decimalNumber];
-            return formattedNumber;
+
+			//小数点以下の最後が0で終わる数字の表示(例:1.000)
+			if (self.calcStatus == StatusNumberInput && [self.displayString hasSuffix:@"0"] && [self.displayString rangeOfString:decimalSeparator].location != NSNotFound) {
+				//小数点の表示ケタを調整
+				NSUInteger minimunFractionDigits =  [self.displayString length] - [self.displayString rangeOfString:decimalSeparator options:NSBackwardsSearch].location - 1;
+				[formatter setMinimumFractionDigits:minimunFractionDigits];
+			}
+			NSString *formattedNumber = [formatter stringFromNumber:decimalNumber];
+			return formattedNumber;
 		}
-    
 	}
-	else {//末尾が小数点で終わる場合
-        NSMutableString *numberString = [NSMutableString stringWithString:self.displayString];
-        [numberString deleteCharactersInRange:NSMakeRange([numberString length] - 1, 1)];
-        
+	else { //末尾が小数点で終わる場合
+		NSMutableString *numberString = [NSMutableString stringWithString:self.displayString];
+		[numberString deleteCharactersInRange:NSMakeRange([numberString length] - 1, 1)];
+
 		NSDecimalNumber *decimalNumber = [NSDecimalNumber decimalNumberWithString:numberString];
-        
+
 		NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
 		formatter.numberStyle = NSNumberFormatterDecimalStyle;
-        [formatter setLocale:[NSLocale currentLocale]];
+		[formatter setLocale:[NSLocale currentLocale]];
 		NSString *formattedNumber = [formatter stringFromNumber:decimalNumber];
 		NSString *appendPoint = [formattedNumber stringByAppendingString:[formatter decimalSeparator]]; //小数点を末尾に追加
 		return appendPoint;
@@ -777,11 +757,6 @@
 	if ([numberString hasSuffix:decimalSeparator]) { //少数点以下が入力されていないなら、小数点を削除する
 		[numberString deleteCharactersInRange:NSMakeRange([numberString length] - 1, 1)];
 	}
-    /*NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setLocale:[NSLocale currentLocale]];
-     NSString *groupingSeparator = [formatter groupingSeparator];*/
-    /*[numberString replaceOccurrencesOfString:groupingSeparator withString:@"" options:0 range:NSMakeRange( 0,[numberString length])];*/
-    
 	return [NSDecimalNumber decimalNumberWithString:numberString];
 }
 
@@ -806,10 +781,10 @@
  */
 - (NSInteger)requestDisplayOperator {
 	if (self.calcStatus == StatusOpereterInput) {
-        //前回入力された演算子を取り出す
+		//前回入力された演算子を取り出す
 		id obj = [queue objectAtIndex:[queue count] - 1];
 		if (![obj isMemberOfClass:[NSDecimalNumber class]] && [obj isKindOfClass:[NSNumber class]]) {
-            return [obj integerValue];
+			return [obj integerValue];
 		}
 	}
 	return OperatorNone;

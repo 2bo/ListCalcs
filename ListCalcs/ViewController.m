@@ -22,7 +22,7 @@
 
 @end
 
-@implementation ViewController //TODO:
+@implementation ViewController 
 #define DUMMY_CELL @"Dummy"
 {
 	CGFloat initialTableViewHeight;
@@ -39,16 +39,16 @@
 	[super viewDidLoad];
     
     /*広告枠の追加*/
-    /*bannerView = [[GADBannerView alloc] initWithFrame:CGRectMake(0, 20, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    bannerView = [[GADBannerView alloc] initWithFrame:CGRectMake(0, 20, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
     bannerView.adUnitID = @"ca-app-pub-6871882305713553/4205288629";
     bannerView.rootViewController = self;
     [self.view addSubview:bannerView];
     
     [bannerView loadRequest:[GADRequest request]];
     
-    GADRequest *request = [GADRequest request];
+    //GADRequest *request = [GADRequest request];
     
-    // FIXME:テスト広告のリクエストを行う。シミュレータと
+    /*// テスト広告のリクエストを行う。
     // テスト広告を表示する端末の識別子を埋め込む。
     request.testDevices = [NSArray arrayWithObjects:
                            @"22642F6E-2462-5500-AC38-CCC722807242",
@@ -609,7 +609,7 @@
 		[formatter setMaximumFractionDigits:12];
 		formatter.numberStyle = NSNumberFormatterDecimalStyle;
 	}
-	else if (NSOrderedDescending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:999999999999]] || NSOrderedAscending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:0.000000000001]]) {  //FIXME:数字直打ち
+	else if (NSOrderedDescending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:999999999999]] || NSOrderedAscending == [absoluteValue compare:[NSDecimalNumber numberWithDouble:0.000000000001]]) {  //(F):数字直打ち
 		// NSNumberを科学形式(E)に変換
 		[formatter setMaximumFractionDigits:6];
 		formatter.numberStyle = NSNumberFormatterScientificStyle;
@@ -985,7 +985,57 @@
 		return nil;
 	}
 }
-
-
-
 @end
+
+/***
+ JTGestureBasedTableView
+ Copyright (c) 2012 James Tang <mystcolor@gmail.com>
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is furnished
+ to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ ***/
+
+/***
+ SVProgressHUD
+ Copyright (c) 2011 Sam Vermette
+ 
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+ 
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+ 
+ A different license may apply to other ressources included in this package,
+ including Joseph Wain's Glyphish Icons. Please consult their
+ respective headers for the terms of their individual licenses.
+ ***/

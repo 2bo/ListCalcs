@@ -359,7 +359,6 @@
 	[calcModel inputOperand:[NSDecimalNumber decimalNumberWithString:@"7"]]; //7の入力
 	XCTAssertEqualObjects([calcModel requestDisplayString], @"7", @"Failed");
     
-    //FIXME:6÷7になっている。
 	[calcModel inputoperatorDivide]; // /
 	XCTAssertEqualObjects([calcModel requestDisplayString], @"0,119047619048", @"Failed");
     

@@ -10,6 +10,10 @@
 		CE0832D41993AAE7004CD1ED /* 6_button_@3_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7729D19927BCF0050DC11 /* 6_button_@3_5.png */; };
 		CE0832D51993AFD6004CD1ED /* DecimalPoint_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA772A919927BCF0050DC11 /* DecimalPoint_button.png */; };
 		CE0832D61993AFE2004CD1ED /* DecimalPoint_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA772AA19927BCF0050DC11 /* DecimalPoint_button_selected.png */; };
+		CE09016719ACB86B00F21C2E /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE09016619ACB86B00F21C2E /* libAdapterIAd.a */; };
+		CE09016919ACB88D00F21C2E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE09016819ACB88D00F21C2E /* iAd.framework */; };
+		CEA190D319ACBFC0004BB908 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */; };
+		CEA190D419ACBFC0004BB908 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEA190D219ACBFC0004BB908 /* README.txt */; };
 		CEA771D2199276F40050DC11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA771D1199276F40050DC11 /* Foundation.framework */; };
 		CEA771D4199276F40050DC11 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA771D3199276F40050DC11 /* CoreGraphics.framework */; };
 		CEA771D6199276F40050DC11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA771D5199276F40050DC11 /* UIKit.framework */; };
@@ -36,8 +40,6 @@
 		CEA7724319927B5B0050DC11 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7723C19927B5B0050DC11 /* libNendAd.a */; };
 		CEA7724419927B5B0050DC11 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7723D19927B5B0050DC11 /* libAdapterNend.a */; };
 		CEA7724519927B5B0050DC11 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7724219927B5B0050DC11 /* NADView_readme.txt */; };
-		CEA7725419927B770050DC11 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7725219927B770050DC11 /* libGoogleAdMobAds.a */; };
-		CEA7725519927B770050DC11 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7725319927B770050DC11 /* README.txt */; };
 		CEA7725719927BA30050DC11 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEA7725619927BA30050DC11 /* Settings.bundle */; };
 		CEA772B719927BCF0050DC11 /* Equal_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7725919927BCF0050DC11 /* Equal_button_selected.png */; };
 		CEA772B819927BCF0050DC11 /* Equal_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7725A19927BCF0050DC11 /* Equal_button.png */; };
@@ -161,6 +163,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE09016619ACB86B00F21C2E /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterIAd.a; sourceTree = "<group>"; };
+		CE09016819ACB88D00F21C2E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		CEA190C519ACBFC0004BB908 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		CEA190C619ACBFC0004BB908 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		CEA190C719ACBFC0004BB908 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		CEA190C819ACBFC0004BB908 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		CEA190C919ACBFC0004BB908 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		CEA190CA19ACBFC0004BB908 /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
+		CEA190CB19ACBFC0004BB908 /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
+		CEA190CC19ACBFC0004BB908 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		CEA190CD19ACBFC0004BB908 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		CEA190CE19ACBFC0004BB908 /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
+		CEA190CF19ACBFC0004BB908 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		CEA190D019ACBFC0004BB908 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		CEA190D219ACBFC0004BB908 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		CEA190D619ACBFF9004BB908 /* GADCustomEventBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		CEA190D719ACBFF9004BB908 /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		CEA190D819ACBFF9004BB908 /* GADCustomEventExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		CEA190D919ACBFF9004BB908 /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		CEA190DA19ACBFF9004BB908 /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		CEA190DB19ACBFF9004BB908 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
 		CEA771CE199276F40050DC11 /* ListCalcs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListCalcs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA771D1199276F40050DC11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEA771D3199276F40050DC11 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,20 +228,6 @@
 		CEA7724019927B5B0050DC11 /* NADIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADIconView.h; sourceTree = "<group>"; };
 		CEA7724119927B5B0050DC11 /* NADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADView.h; sourceTree = "<group>"; };
 		CEA7724219927B5B0050DC11 /* NADView_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NADView_readme.txt; sourceTree = "<group>"; };
-		CEA7724619927B770050DC11 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
-		CEA7724719927B770050DC11 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		CEA7724819927B770050DC11 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
-		CEA7724919927B770050DC11 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		CEA7724A19927B770050DC11 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		CEA7724B19927B770050DC11 /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
-		CEA7724C19927B770050DC11 /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
-		CEA7724D19927B770050DC11 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		CEA7724E19927B770050DC11 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		CEA7724F19927B770050DC11 /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
-		CEA7725019927B770050DC11 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		CEA7725119927B770050DC11 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		CEA7725219927B770050DC11 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		CEA7725319927B770050DC11 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CEA7725619927BA30050DC11 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CEA7725919927BCF0050DC11 /* Equal_button_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Equal_button_selected.png; sourceTree = "<group>"; };
 		CEA7725A19927BCF0050DC11 /* Equal_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Equal_button.png; sourceTree = "<group>"; };
@@ -344,6 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE09016919ACB88D00F21C2E /* iAd.framework in Frameworks */,
 				CEA771D2199276F40050DC11 /* Foundation.framework in Frameworks */,
 				CEA771D6199276F40050DC11 /* UIKit.framework in Frameworks */,
 				CEA77340199399F70050DC11 /* QuartzCore.framework in Frameworks */,
@@ -354,12 +365,13 @@
 				CEA771D4199276F40050DC11 /* CoreGraphics.framework in Frameworks */,
 				CEA77336199399AE0050DC11 /* AVFoundation.framework in Frameworks */,
 				CEA77334199399A40050DC11 /* AudioToolbox.framework in Frameworks */,
+				CEA190D319ACBFC0004BB908 /* libGoogleAdMobAds.a in Frameworks */,
 				CEA77332199399910050DC11 /* AdSupport.framework in Frameworks */,
 				CEA77330199399880050DC11 /* CoreTelephony.framework in Frameworks */,
+				CE09016719ACB86B00F21C2E /* libAdapterIAd.a in Frameworks */,
 				CEA7732E199399740050DC11 /* ImageIO.framework in Frameworks */,
 				CEA7724419927B5B0050DC11 /* libAdapterNend.a in Frameworks */,
 				CEA7724319927B5B0050DC11 /* libNendAd.a in Frameworks */,
-				CEA7725419927B770050DC11 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE09016519ACB85000F21C2E /* iAd */ = {
+			isa = PBXGroup;
+			children = (
+				CE09016619ACB86B00F21C2E /* libAdapterIAd.a */,
+			);
+			name = iAd;
+			sourceTree = "<group>";
+		};
+		CEA190D519ACBFDA004BB908 /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				CEA190D619ACBFF9004BB908 /* GADCustomEventBanner.h */,
+				CEA190D719ACBFF9004BB908 /* GADCustomEventBannerDelegate.h */,
+				CEA190D819ACBFF9004BB908 /* GADCustomEventExtras.h */,
+				CEA190D919ACBFF9004BB908 /* GADCustomEventInterstitial.h */,
+				CEA190DA19ACBFF9004BB908 /* GADCustomEventInterstitialDelegate.h */,
+				CEA190DB19ACBFF9004BB908 /* GADCustomEventRequest.h */,
+			);
+			name = Mediation;
+			sourceTree = "<group>";
+		};
 		CEA771C5199276F30050DC11 = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +431,7 @@
 		CEA771D0199276F40050DC11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE09016819ACB88D00F21C2E /* iAd.framework */,
 				CEA7733F199399F70050DC11 /* QuartzCore.framework */,
 				CEA7733D199399EB0050DC11 /* SystemConfiguration.framework */,
 				CEA7733B199399DC0050DC11 /* StoreKit.framework */,
@@ -529,6 +563,7 @@
 		CEA7723919927B1F0050DC11 /* AD */ = {
 			isa = PBXGroup;
 			children = (
+				CE09016519ACB85000F21C2E /* iAd */,
 				CEA7723B19927B330050DC11 /* Admob */,
 				CEA7723A19927B270050DC11 /* Nend */,
 			);
@@ -552,20 +587,21 @@
 		CEA7723B19927B330050DC11 /* Admob */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7724619927B770050DC11 /* GADAdMobExtras.h */,
-				CEA7724719927B770050DC11 /* GADAdNetworkExtras.h */,
-				CEA7724819927B770050DC11 /* GADAdSize.h */,
-				CEA7724919927B770050DC11 /* GADBannerView.h */,
-				CEA7724A19927B770050DC11 /* GADBannerViewDelegate.h */,
-				CEA7724B19927B770050DC11 /* GADInAppPurchase.h */,
-				CEA7724C19927B770050DC11 /* GADInAppPurchaseDelegate.h */,
-				CEA7724D19927B770050DC11 /* GADInterstitial.h */,
-				CEA7724E19927B770050DC11 /* GADInterstitialDelegate.h */,
-				CEA7724F19927B770050DC11 /* GADModules.h */,
-				CEA7725019927B770050DC11 /* GADRequest.h */,
-				CEA7725119927B770050DC11 /* GADRequestError.h */,
-				CEA7725219927B770050DC11 /* libGoogleAdMobAds.a */,
-				CEA7725319927B770050DC11 /* README.txt */,
+				CEA190D519ACBFDA004BB908 /* Mediation */,
+				CEA190C519ACBFC0004BB908 /* GADAdMobExtras.h */,
+				CEA190C619ACBFC0004BB908 /* GADAdNetworkExtras.h */,
+				CEA190C719ACBFC0004BB908 /* GADAdSize.h */,
+				CEA190C819ACBFC0004BB908 /* GADBannerView.h */,
+				CEA190C919ACBFC0004BB908 /* GADBannerViewDelegate.h */,
+				CEA190CA19ACBFC0004BB908 /* GADInAppPurchase.h */,
+				CEA190CB19ACBFC0004BB908 /* GADInAppPurchaseDelegate.h */,
+				CEA190CC19ACBFC0004BB908 /* GADInterstitial.h */,
+				CEA190CD19ACBFC0004BB908 /* GADInterstitialDelegate.h */,
+				CEA190CE19ACBFC0004BB908 /* GADModules.h */,
+				CEA190CF19ACBFC0004BB908 /* GADRequest.h */,
+				CEA190D019ACBFC0004BB908 /* GADRequestError.h */,
+				CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */,
+				CEA190D219ACBFC0004BB908 /* README.txt */,
 			);
 			name = Admob;
 			sourceTree = "<group>";
@@ -768,8 +804,8 @@
 				CEA772C719927BCF0050DC11 /* 9_button.png in Resources */,
 				CEA772CC19927BCF0050DC11 /* 7_button_selected.png in Resources */,
 				CEA772D119927BCF0050DC11 /* 4_button.png in Resources */,
-				CEA7725519927B770050DC11 /* README.txt in Resources */,
 				CEA772F819927BCF0050DC11 /* 7_button_selected_@3_5.png in Resources */,
+				CEA190D419ACBFC0004BB908 /* README.txt in Resources */,
 				CEA772C219927BCF0050DC11 /* PlusMinus_button.png in Resources */,
 				CEA772FC19927BCF0050DC11 /* 5_button_selected_@3_5.png in Resources */,
 				CEA772BB19927BCF0050DC11 /* Mul_button_selected.png in Resources */,
