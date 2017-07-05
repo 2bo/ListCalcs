@@ -10,9 +10,7 @@
 		CE0832D41993AAE7004CD1ED /* 6_button_@3_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7729D19927BCF0050DC11 /* 6_button_@3_5.png */; };
 		CE0832D51993AFD6004CD1ED /* DecimalPoint_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA772A919927BCF0050DC11 /* DecimalPoint_button.png */; };
 		CE0832D61993AFE2004CD1ED /* DecimalPoint_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA772AA19927BCF0050DC11 /* DecimalPoint_button_selected.png */; };
-		CE09016719ACB86B00F21C2E /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE09016619ACB86B00F21C2E /* libAdapterIAd.a */; };
 		CE09016919ACB88D00F21C2E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE09016819ACB88D00F21C2E /* iAd.framework */; };
-		CEA190D319ACBFC0004BB908 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */; };
 		CEA190D419ACBFC0004BB908 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEA190D219ACBFC0004BB908 /* README.txt */; };
 		CEA771D2199276F40050DC11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA771D1199276F40050DC11 /* Foundation.framework */; };
 		CEA771D4199276F40050DC11 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA771D3199276F40050DC11 /* CoreGraphics.framework */; };
@@ -37,8 +35,6 @@
 		CEA7723219927A960050DC11 /* NSMutableArray+StackAndQueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7722F19927A960050DC11 /* NSMutableArray+StackAndQueueAdditions.m */; };
 		CEA7723319927A960050DC11 /* CopyableUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7723119927A960050DC11 /* CopyableUILabel.m */; };
 		CEA7723719927AF30050DC11 /* MoveCellRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7723619927AF30050DC11 /* MoveCellRecognizer.m */; };
-		CEA7724319927B5B0050DC11 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7723C19927B5B0050DC11 /* libNendAd.a */; };
-		CEA7724419927B5B0050DC11 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7723D19927B5B0050DC11 /* libAdapterNend.a */; };
 		CEA7724519927B5B0050DC11 /* NADView_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7724219927B5B0050DC11 /* NADView_readme.txt */; };
 		CEA7725719927BA30050DC11 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEA7725619927BA30050DC11 /* Settings.bundle */; };
 		CEA772B719927BCF0050DC11 /* Equal_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA7725919927BCF0050DC11 /* Equal_button_selected.png */; };
@@ -150,6 +146,10 @@
 		CEA77340199399F70050DC11 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7733F199399F70050DC11 /* QuartzCore.framework */; };
 		CEBD80541993A056007E799E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD80511993A056007E799E /* AppDelegate.m */; };
 		CEBD80551993A056007E799E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBD80531993A056007E799E /* ViewController.m */; };
+		CEE88E0B1F0D3892009D3752 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */; };
+		CEE88E0C1F0D38FA009D3752 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE09016619ACB86B00F21C2E /* libAdapterIAd.a */; };
+		CEE88E0D1F0D3913009D3752 /* libAdapterNend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7723D19927B5B0050DC11 /* libAdapterNend.a */; };
+		CEE88E0E1F0D3924009D3752 /* libNendAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7723C19927B5B0050DC11 /* libNendAd.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,7 +328,7 @@
 		CEA7731819927BE60050DC11 /* settings-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-512.png"; sourceTree = "<group>"; };
 		CEA7731C19927D770050DC11 /* ListCalcsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCalcsTests.m; sourceTree = "<group>"; };
 		CEA7732319927FAC0050DC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CEA7732619927FCF0050DC11 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		CEA7732619927FCF0050DC11 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA7732719927FCF0050DC11 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEA7732819927FD00050DC11 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEA7732A1992801F0050DC11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
@@ -354,6 +354,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE88E0E1F0D3924009D3752 /* libNendAd.a in Frameworks */,
+				CEE88E0D1F0D3913009D3752 /* libAdapterNend.a in Frameworks */,
+				CEE88E0C1F0D38FA009D3752 /* libAdapterIAd.a in Frameworks */,
+				CEE88E0B1F0D3892009D3752 /* libGoogleAdMobAds.a in Frameworks */,
 				CE09016919ACB88D00F21C2E /* iAd.framework in Frameworks */,
 				CEA771D2199276F40050DC11 /* Foundation.framework in Frameworks */,
 				CEA771D6199276F40050DC11 /* UIKit.framework in Frameworks */,
@@ -365,13 +369,9 @@
 				CEA771D4199276F40050DC11 /* CoreGraphics.framework in Frameworks */,
 				CEA77336199399AE0050DC11 /* AVFoundation.framework in Frameworks */,
 				CEA77334199399A40050DC11 /* AudioToolbox.framework in Frameworks */,
-				CEA190D319ACBFC0004BB908 /* libGoogleAdMobAds.a in Frameworks */,
 				CEA77332199399910050DC11 /* AdSupport.framework in Frameworks */,
 				CEA77330199399880050DC11 /* CoreTelephony.framework in Frameworks */,
-				CE09016719ACB86B00F21C2E /* libAdapterIAd.a in Frameworks */,
 				CEA7732E199399740050DC11 /* ImageIO.framework in Frameworks */,
-				CEA7724419927B5B0050DC11 /* libAdapterNend.a in Frameworks */,
-				CEA7724319927B5B0050DC11 /* libNendAd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 			children = (
 				CE09016619ACB86B00F21C2E /* libAdapterIAd.a */,
 			);
-			name = iAd;
+			path = iAd;
 			sourceTree = "<group>";
 		};
 		CEA190D519ACBFDA004BB908 /* Mediation */ = {
@@ -406,15 +406,15 @@
 				CEA190DA19ACBFF9004BB908 /* GADCustomEventInterstitialDelegate.h */,
 				CEA190DB19ACBFF9004BB908 /* GADCustomEventRequest.h */,
 			);
-			name = Mediation;
+			path = Mediation;
 			sourceTree = "<group>";
 		};
 		CEA771C5199276F30050DC11 = {
 			isa = PBXGroup;
 			children = (
+				CEA771D0199276F40050DC11 /* Frameworks */,
 				CEA771D7199276F40050DC11 /* ListCalcs */,
 				CEA771F6199276F40050DC11 /* ListCalcsTests */,
-				CEA771D0199276F40050DC11 /* Frameworks */,
 				CEA771CF199276F40050DC11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -453,24 +453,24 @@
 		CEA771D7199276F40050DC11 /* ListCalcs */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7732019927DC50050DC11 /* Main.storyboard */,
-				CEBD80501993A056007E799E /* AppDelegate.h */,
-				CEBD80511993A056007E799E /* AppDelegate.m */,
-				CEBD80521993A056007E799E /* ViewController.h */,
-				CEBD80531993A056007E799E /* ViewController.m */,
-				CEA7720A1992789A0050DC11 /* CalcKeyboard.xib */,
-				CEA772091992789A0050DC11 /* CalcKeyboard_3_5.xib */,
-				CEA7720F199278D30050DC11 /* StatisticsView.xib */,
-				CEA7720D199278D30050DC11 /* SettingTableViewController.h */,
-				CEA7720E199278D30050DC11 /* SettingTableViewController.m */,
-				CEA77217199279760050DC11 /* Images.xcassets */,
 				CEA7723919927B1F0050DC11 /* AD */,
-				CEA7723819927AF70050DC11 /* Recognizer */,
 				CEA7723419927AAD0050DC11 /* Category */,
-				CEA7722D19927A750050DC11 /* Model */,
 				CEA7722919927A460050DC11 /* CustomView */,
+				CEA7722D19927A750050DC11 /* Model */,
+				CEA7723819927AF70050DC11 /* Recognizer */,
 				CEA7721F199279DA0050DC11 /* SVProgressHUD */,
 				CEA771D8199276F40050DC11 /* Supporting Files */,
+				CEBD80501993A056007E799E /* AppDelegate.h */,
+				CEBD80511993A056007E799E /* AppDelegate.m */,
+				CEA7720A1992789A0050DC11 /* CalcKeyboard.xib */,
+				CEA772091992789A0050DC11 /* CalcKeyboard_3_5.xib */,
+				CEA77217199279760050DC11 /* Images.xcassets */,
+				CEA7732019927DC50050DC11 /* Main.storyboard */,
+				CEA7720D199278D30050DC11 /* SettingTableViewController.h */,
+				CEA7720E199278D30050DC11 /* SettingTableViewController.m */,
+				CEA7720F199278D30050DC11 /* StatisticsView.xib */,
+				CEBD80521993A056007E799E /* ViewController.h */,
+				CEBD80531993A056007E799E /* ViewController.m */,
 			);
 			path = ListCalcs;
 			sourceTree = "<group>";
@@ -478,22 +478,22 @@
 		CEA771D8199276F40050DC11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEA7725819927BB10050DC11 /* Images */,
+				CEA771DA199276F40050DC11 /* InfoPlist.strings */,
+				CEA771D9199276F40050DC11 /* ListCalcs-Info.plist */,
+				CEA771DF199276F40050DC11 /* ListCalcs-Prefix.pch */,
 				CEA7732B1992801F0050DC11 /* Localizable.strings */,
 				CEA7725619927BA30050DC11 /* Settings.bundle */,
-				CEA7725819927BB10050DC11 /* Images */,
-				CEA771D9199276F40050DC11 /* ListCalcs-Info.plist */,
-				CEA771DA199276F40050DC11 /* InfoPlist.strings */,
 				CEA771DD199276F40050DC11 /* main.m */,
-				CEA771DF199276F40050DC11 /* ListCalcs-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CEA771F6199276F40050DC11 /* ListCalcsTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7731C19927D770050DC11 /* ListCalcsTests.m */,
 				CEA771F7199276F40050DC11 /* Supporting Files */,
+				CEA7731C19927D770050DC11 /* ListCalcsTests.m */,
 			);
 			path = ListCalcsTests;
 			sourceTree = "<group>";
@@ -501,21 +501,21 @@
 		CEA771F7199276F40050DC11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEA771F8199276F40050DC11 /* ListCalcsTests-Info.plist */,
 				CEA771F9199276F40050DC11 /* InfoPlist.strings */,
+				CEA771F8199276F40050DC11 /* ListCalcsTests-Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CEA7721F199279DA0050DC11 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
 				CEA77219199279D40050DC11 /* SVProgressHUD-Prefix.pch */,
-				CEA7721B199279D40050DC11 /* SVProgressHUD.h */,
 				CEA7721A199279D40050DC11 /* SVProgressHUD.bundle */,
+				CEA7721B199279D40050DC11 /* SVProgressHUD.h */,
 				CEA7721C199279D40050DC11 /* SVProgressHUD.m */,
 			);
-			name = SVProgressHUD;
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		CEA7722919927A460050DC11 /* CustomView */ = {
@@ -523,12 +523,12 @@
 			children = (
 				CEA7722019927A410050DC11 /* CalcKeyboardView.h */,
 				CEA7722119927A410050DC11 /* CalcKeyboardView.m */,
-				CEA7722219927A410050DC11 /* StatisticsView.h */,
-				CEA7722319927A410050DC11 /* StatisticsView.m */,
 				CEA7722419927A410050DC11 /* CalcTableViewCell.h */,
 				CEA7722519927A410050DC11 /* CalcTableViewCell.m */,
+				CEA7722219927A410050DC11 /* StatisticsView.h */,
+				CEA7722319927A410050DC11 /* StatisticsView.m */,
 			);
-			name = CustomView;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		CEA7722D19927A750050DC11 /* Model */ = {
@@ -537,18 +537,18 @@
 				CEA7722A19927A710050DC11 /* CalcModel.h */,
 				CEA7722B19927A710050DC11 /* CalcModel.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEA7723419927AAD0050DC11 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7722E19927A960050DC11 /* NSMutableArray+StackAndQueueAdditions.h */,
-				CEA7722F19927A960050DC11 /* NSMutableArray+StackAndQueueAdditions.m */,
 				CEA7723019927A960050DC11 /* CopyableUILabel.h */,
 				CEA7723119927A960050DC11 /* CopyableUILabel.m */,
+				CEA7722E19927A960050DC11 /* NSMutableArray+StackAndQueueAdditions.h */,
+				CEA7722F19927A960050DC11 /* NSMutableArray+StackAndQueueAdditions.m */,
 			);
-			name = Category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		CEA7723819927AF70050DC11 /* Recognizer */ = {
@@ -557,31 +557,31 @@
 				CEA7723519927AF30050DC11 /* MoveCellRecognizer.h */,
 				CEA7723619927AF30050DC11 /* MoveCellRecognizer.m */,
 			);
-			name = Recognizer;
+			path = Recognizer;
 			sourceTree = "<group>";
 		};
 		CEA7723919927B1F0050DC11 /* AD */ = {
 			isa = PBXGroup;
 			children = (
-				CE09016519ACB85000F21C2E /* iAd */,
 				CEA7723B19927B330050DC11 /* Admob */,
 				CEA7723A19927B270050DC11 /* Nend */,
+				CE09016519ACB85000F21C2E /* iAd */,
 			);
-			name = AD;
+			path = AD;
 			sourceTree = "<group>";
 		};
 		CEA7723A19927B270050DC11 /* Nend */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7723C19927B5B0050DC11 /* libNendAd.a */,
-				CEA7723D19927B5B0050DC11 /* libAdapterNend.a */,
 				CEA7723E19927B5B0050DC11 /* NADIconArrayView.h */,
 				CEA7723F19927B5B0050DC11 /* NADIconLoader.h */,
 				CEA7724019927B5B0050DC11 /* NADIconView.h */,
 				CEA7724119927B5B0050DC11 /* NADView.h */,
 				CEA7724219927B5B0050DC11 /* NADView_readme.txt */,
+				CEA7723D19927B5B0050DC11 /* libAdapterNend.a */,
+				CEA7723C19927B5B0050DC11 /* libNendAd.a */,
 			);
-			name = Nend;
+			path = Nend;
 			sourceTree = "<group>";
 		};
 		CEA7723B19927B330050DC11 /* Admob */ = {
@@ -600,122 +600,122 @@
 				CEA190CE19ACBFC0004BB908 /* GADModules.h */,
 				CEA190CF19ACBFC0004BB908 /* GADRequest.h */,
 				CEA190D019ACBFC0004BB908 /* GADRequestError.h */,
-				CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */,
 				CEA190D219ACBFC0004BB908 /* README.txt */,
+				CEA190D119ACBFC0004BB908 /* libGoogleAdMobAds.a */,
 			);
-			name = Admob;
+			path = Admob;
 			sourceTree = "<group>";
 		};
 		CEA7725819927BB10050DC11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7725919927BCF0050DC11 /* Equal_button_selected.png */,
-				CEA7725A19927BCF0050DC11 /* Equal_button.png */,
-				CEA7725B19927BCF0050DC11 /* Add_button_selected.png */,
-				CEA7725C19927BCF0050DC11 /* Add_button.png */,
-				CEA7725D19927BCF0050DC11 /* Mul_button_selected.png */,
-				CEA7725E19927BCF0050DC11 /* Mul_button.png */,
-				CEA7725F19927BCF0050DC11 /* Div_button_selected.png */,
-				CEA7726019927BCF0050DC11 /* Div_button.png */,
-				CEA7726119927BCF0050DC11 /* Sub_button_selected.png */,
-				CEA7726219927BCF0050DC11 /* Sub_button.png */,
-				CEA7726319927BCF0050DC11 /* PlusMinus_button_selected.png */,
-				CEA7726419927BCF0050DC11 /* PlusMinus_button.png */,
-				CEA7726519927BCF0050DC11 /* Percent_button_selected.png */,
-				CEA7726619927BCF0050DC11 /* Percent_button.png */,
-				CEA7726719927BCF0050DC11 /* C_button_selected.png */,
-				CEA7726819927BCF0050DC11 /* C_button.png */,
-				CEA7726919927BCF0050DC11 /* 9_button.png */,
-				CEA7726A19927BCF0050DC11 /* 9_button_selected.png */,
-				CEA7726B19927BCF0050DC11 /* 8_button.png */,
-				CEA7726C19927BCF0050DC11 /* 8_button_selected.png */,
-				CEA7726D19927BCF0050DC11 /* 7_button.png */,
-				CEA7726E19927BCF0050DC11 /* 7_button_selected.png */,
-				CEA7726F19927BCF0050DC11 /* 6_button.png */,
-				CEA7727019927BCF0050DC11 /* 6_button_selected.png */,
-				CEA7727119927BCF0050DC11 /* 5_button.png */,
-				CEA7727219927BCF0050DC11 /* 5_button_selected.png */,
-				CEA7727319927BCF0050DC11 /* 4_button.png */,
-				CEA7727419927BCF0050DC11 /* 4_button_selected.png */,
-				CEA7727519927BCF0050DC11 /* 3_button.png */,
-				CEA7727619927BCF0050DC11 /* 3_button_selected.png */,
-				CEA7727719927BCF0050DC11 /* 2_button.png */,
-				CEA7727819927BCF0050DC11 /* 2_button_selected.png */,
-				CEA7727919927BCF0050DC11 /* 1_button.png */,
-				CEA7727A19927BCF0050DC11 /* 1_button_selected.png */,
-				CEA7727B19927BCF0050DC11 /* 0_button.png */,
-				CEA7727C19927BCF0050DC11 /* 0_button_selected.png */,
-				CEA7727D19927BCF0050DC11 /* 0_button_@3_5.png */,
-				CEA7727E19927BCF0050DC11 /* Equal_button_selected_@3_5.png */,
-				CEA7727F19927BCF0050DC11 /* Add_button_selected_@3_5.png */,
-				CEA7728019927BCF0050DC11 /* Mul_button_selected_@3_5.png */,
-				CEA7728119927BCF0050DC11 /* Div_button_selected_@3_5.png */,
-				CEA7728219927BCF0050DC11 /* Sub_button_selected_@3_5.png */,
-				CEA7728319927BCF0050DC11 /* Equal_button_@3_5.png */,
-				CEA7728419927BCF0050DC11 /* Sub_button_@3_5.png */,
-				CEA7728519927BCF0050DC11 /* Div_button_@3_5.png */,
-				CEA7728619927BCF0050DC11 /* Mul_button_@3_5.png */,
-				CEA7728719927BCF0050DC11 /* Add_button_@3_5.png */,
-				CEA7728819927BCF0050DC11 /* PlusMinus_button_@3_5.png */,
-				CEA7728919927BCF0050DC11 /* PlusMinus_button_selected_@3_5.png */,
-				CEA7728A19927BCF0050DC11 /* Percent_button_selected_@3_5.png */,
-				CEA7728B19927BCF0050DC11 /* Percent_button_@3_5.png */,
-				CEA7728C19927BCF0050DC11 /* Delete_button_selected_@3_5.png */,
-				CEA7728D19927BCF0050DC11 /* Delete_button_@3_5.png */,
-				CEA7728E19927BCF0050DC11 /* C_button_@3_5.png */,
-				CEA7728F19927BCF0050DC11 /* C_button_selected_@3_5.png */,
-				CEA7729019927BCF0050DC11 /* AC_button_@3_5.png */,
-				CEA7729119927BCF0050DC11 /* AC_button_selected_@3_5.png */,
-				CEA7729219927BCF0050DC11 /* DecimalComma_button_selected_@3_5.png */,
-				CEA7729319927BCF0050DC11 /* DecimalComma_button_@3_5.png */,
-				CEA7729419927BCF0050DC11 /* DecimalPoint_button_selected_@3_5.png */,
-				CEA7729519927BCF0050DC11 /* DecimalPoint_button_@3_5.png */,
-				CEA7729619927BCF0050DC11 /* 9_button_selected_@3_5.png */,
-				CEA7729719927BCF0050DC11 /* 9_button_@3_5.png */,
-				CEA7729819927BCF0050DC11 /* 8_button_selected_@3_5.png */,
-				CEA7729919927BCF0050DC11 /* 8_button_@3_5.png */,
-				CEA7729A19927BCF0050DC11 /* 7_button_selected_@3_5.png */,
-				CEA7729B19927BCF0050DC11 /* 7_button_@3_5.png */,
-				CEA7729C19927BCF0050DC11 /* 6_button_selected_@3_5.png */,
-				CEA7729D19927BCF0050DC11 /* 6_button_@3_5.png */,
-				CEA7729E19927BCF0050DC11 /* 5_button_selected_@3_5.png */,
-				CEA7729F19927BCF0050DC11 /* 5_button_@3_5.png */,
-				CEA772A019927BCF0050DC11 /* 4_button_selected_@3_5.png */,
-				CEA772A119927BCF0050DC11 /* 4_button_@3_5.png */,
-				CEA772A219927BCF0050DC11 /* 3_button_selected_@3_5.png */,
-				CEA772A319927BCF0050DC11 /* 3_button_@3_5.png */,
-				CEA772A419927BCF0050DC11 /* 2_button_selected_@3_5.png */,
-				CEA772A519927BCF0050DC11 /* 2_button_@3_5.png */,
-				CEA772A619927BCF0050DC11 /* 1_button_selected_@3_5.png */,
-				CEA772A719927BCF0050DC11 /* 1_button_@3_5.png */,
-				CEA772A819927BCF0050DC11 /* 0_button_selected_@3_5.png */,
-				CEA772A919927BCF0050DC11 /* DecimalPoint_button.png */,
-				CEA772AA19927BCF0050DC11 /* DecimalPoint_button_selected.png */,
-				CEA772AB19927BCF0050DC11 /* DecimalComma_button_selected.png */,
-				CEA772AC19927BCF0050DC11 /* DecimalComma_button.png */,
-				CEA772AD19927BCF0050DC11 /* AC_button.png */,
-				CEA772AE19927BCF0050DC11 /* AC_button_selected.png */,
-				CEA772AF19927BCF0050DC11 /* Delete_button_selected.png */,
-				CEA772B019927BCF0050DC11 /* Delete_button.png */,
-				CEA772B119927BCF0050DC11 /* Sub_icon.png */,
-				CEA772B219927BCF0050DC11 /* Mul_icon.png */,
-				CEA772B319927BCF0050DC11 /* Add_icon.png */,
-				CEA772B419927BCF0050DC11 /* Div_icon.png */,
-				CEA772B519927BCF0050DC11 /* selected_cell.png */,
-				CEA772B619927BCF0050DC11 /* cell.png */,
 				CEA7731519927BD50050DC11 /* Bar Icons */,
+				CEA7727B19927BCF0050DC11 /* 0_button.png */,
+				CEA7727D19927BCF0050DC11 /* 0_button_@3_5.png */,
+				CEA7727C19927BCF0050DC11 /* 0_button_selected.png */,
+				CEA772A819927BCF0050DC11 /* 0_button_selected_@3_5.png */,
+				CEA7727919927BCF0050DC11 /* 1_button.png */,
+				CEA772A719927BCF0050DC11 /* 1_button_@3_5.png */,
+				CEA7727A19927BCF0050DC11 /* 1_button_selected.png */,
+				CEA772A619927BCF0050DC11 /* 1_button_selected_@3_5.png */,
+				CEA7727719927BCF0050DC11 /* 2_button.png */,
+				CEA772A519927BCF0050DC11 /* 2_button_@3_5.png */,
+				CEA7727819927BCF0050DC11 /* 2_button_selected.png */,
+				CEA772A419927BCF0050DC11 /* 2_button_selected_@3_5.png */,
+				CEA7727519927BCF0050DC11 /* 3_button.png */,
+				CEA772A319927BCF0050DC11 /* 3_button_@3_5.png */,
+				CEA7727619927BCF0050DC11 /* 3_button_selected.png */,
+				CEA772A219927BCF0050DC11 /* 3_button_selected_@3_5.png */,
+				CEA7727319927BCF0050DC11 /* 4_button.png */,
+				CEA772A119927BCF0050DC11 /* 4_button_@3_5.png */,
+				CEA7727419927BCF0050DC11 /* 4_button_selected.png */,
+				CEA772A019927BCF0050DC11 /* 4_button_selected_@3_5.png */,
+				CEA7727119927BCF0050DC11 /* 5_button.png */,
+				CEA7729F19927BCF0050DC11 /* 5_button_@3_5.png */,
+				CEA7727219927BCF0050DC11 /* 5_button_selected.png */,
+				CEA7729E19927BCF0050DC11 /* 5_button_selected_@3_5.png */,
+				CEA7726F19927BCF0050DC11 /* 6_button.png */,
+				CEA7729D19927BCF0050DC11 /* 6_button_@3_5.png */,
+				CEA7727019927BCF0050DC11 /* 6_button_selected.png */,
+				CEA7729C19927BCF0050DC11 /* 6_button_selected_@3_5.png */,
+				CEA7726D19927BCF0050DC11 /* 7_button.png */,
+				CEA7729B19927BCF0050DC11 /* 7_button_@3_5.png */,
+				CEA7726E19927BCF0050DC11 /* 7_button_selected.png */,
+				CEA7729A19927BCF0050DC11 /* 7_button_selected_@3_5.png */,
+				CEA7726B19927BCF0050DC11 /* 8_button.png */,
+				CEA7729919927BCF0050DC11 /* 8_button_@3_5.png */,
+				CEA7726C19927BCF0050DC11 /* 8_button_selected.png */,
+				CEA7729819927BCF0050DC11 /* 8_button_selected_@3_5.png */,
+				CEA7726919927BCF0050DC11 /* 9_button.png */,
+				CEA7729719927BCF0050DC11 /* 9_button_@3_5.png */,
+				CEA7726A19927BCF0050DC11 /* 9_button_selected.png */,
+				CEA7729619927BCF0050DC11 /* 9_button_selected_@3_5.png */,
+				CEA772AD19927BCF0050DC11 /* AC_button.png */,
+				CEA7729019927BCF0050DC11 /* AC_button_@3_5.png */,
+				CEA772AE19927BCF0050DC11 /* AC_button_selected.png */,
+				CEA7729119927BCF0050DC11 /* AC_button_selected_@3_5.png */,
+				CEA7725C19927BCF0050DC11 /* Add_button.png */,
+				CEA7728719927BCF0050DC11 /* Add_button_@3_5.png */,
+				CEA7725B19927BCF0050DC11 /* Add_button_selected.png */,
+				CEA7727F19927BCF0050DC11 /* Add_button_selected_@3_5.png */,
+				CEA772B319927BCF0050DC11 /* Add_icon.png */,
+				CEA7726819927BCF0050DC11 /* C_button.png */,
+				CEA7728E19927BCF0050DC11 /* C_button_@3_5.png */,
+				CEA7726719927BCF0050DC11 /* C_button_selected.png */,
+				CEA7728F19927BCF0050DC11 /* C_button_selected_@3_5.png */,
+				CEA772AC19927BCF0050DC11 /* DecimalComma_button.png */,
+				CEA7729319927BCF0050DC11 /* DecimalComma_button_@3_5.png */,
+				CEA772AB19927BCF0050DC11 /* DecimalComma_button_selected.png */,
+				CEA7729219927BCF0050DC11 /* DecimalComma_button_selected_@3_5.png */,
+				CEA772A919927BCF0050DC11 /* DecimalPoint_button.png */,
+				CEA7729519927BCF0050DC11 /* DecimalPoint_button_@3_5.png */,
+				CEA772AA19927BCF0050DC11 /* DecimalPoint_button_selected.png */,
+				CEA7729419927BCF0050DC11 /* DecimalPoint_button_selected_@3_5.png */,
+				CEA772B019927BCF0050DC11 /* Delete_button.png */,
+				CEA7728D19927BCF0050DC11 /* Delete_button_@3_5.png */,
+				CEA772AF19927BCF0050DC11 /* Delete_button_selected.png */,
+				CEA7728C19927BCF0050DC11 /* Delete_button_selected_@3_5.png */,
+				CEA7726019927BCF0050DC11 /* Div_button.png */,
+				CEA7728519927BCF0050DC11 /* Div_button_@3_5.png */,
+				CEA7725F19927BCF0050DC11 /* Div_button_selected.png */,
+				CEA7728119927BCF0050DC11 /* Div_button_selected_@3_5.png */,
+				CEA772B419927BCF0050DC11 /* Div_icon.png */,
+				CEA7725A19927BCF0050DC11 /* Equal_button.png */,
+				CEA7728319927BCF0050DC11 /* Equal_button_@3_5.png */,
+				CEA7725919927BCF0050DC11 /* Equal_button_selected.png */,
+				CEA7727E19927BCF0050DC11 /* Equal_button_selected_@3_5.png */,
+				CEA7725E19927BCF0050DC11 /* Mul_button.png */,
+				CEA7728619927BCF0050DC11 /* Mul_button_@3_5.png */,
+				CEA7725D19927BCF0050DC11 /* Mul_button_selected.png */,
+				CEA7728019927BCF0050DC11 /* Mul_button_selected_@3_5.png */,
+				CEA772B219927BCF0050DC11 /* Mul_icon.png */,
+				CEA7726619927BCF0050DC11 /* Percent_button.png */,
+				CEA7728B19927BCF0050DC11 /* Percent_button_@3_5.png */,
+				CEA7726519927BCF0050DC11 /* Percent_button_selected.png */,
+				CEA7728A19927BCF0050DC11 /* Percent_button_selected_@3_5.png */,
+				CEA7726419927BCF0050DC11 /* PlusMinus_button.png */,
+				CEA7728819927BCF0050DC11 /* PlusMinus_button_@3_5.png */,
+				CEA7726319927BCF0050DC11 /* PlusMinus_button_selected.png */,
+				CEA7728919927BCF0050DC11 /* PlusMinus_button_selected_@3_5.png */,
+				CEA7726219927BCF0050DC11 /* Sub_button.png */,
+				CEA7728419927BCF0050DC11 /* Sub_button_@3_5.png */,
+				CEA7726119927BCF0050DC11 /* Sub_button_selected.png */,
+				CEA7728219927BCF0050DC11 /* Sub_button_selected_@3_5.png */,
+				CEA772B119927BCF0050DC11 /* Sub_icon.png */,
+				CEA772B619927BCF0050DC11 /* cell.png */,
+				CEA772B519927BCF0050DC11 /* selected_cell.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		CEA7731519927BD50050DC11 /* Bar Icons */ = {
 			isa = PBXGroup;
 			children = (
-				CEA7731619927BE60050DC11 /* paste-512.png */,
 				CEA7731719927BE60050DC11 /* copy-512.png */,
+				CEA7731619927BE60050DC11 /* paste-512.png */,
 				CEA7731819927BE60050DC11 /* settings-512.png */,
 			);
-			name = "Bar Icons";
+			path = "Bar Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -762,7 +762,7 @@
 		CEA771C6199276F30050DC11 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Kota_Nakatsubo;
 				TargetAttributes = {
 					CEA771CD199276F40050DC11 = {
@@ -965,6 +965,7 @@
 				CEA7732719927FCF0050DC11 /* ja */,
 			);
 			name = InfoPlist.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CEA771F9199276F40050DC11 /* InfoPlist.strings */ = {
@@ -974,6 +975,7 @@
 				CEA7732819927FD00050DC11 /* ja */,
 			);
 			name = InfoPlist.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CEA7732019927DC50050DC11 /* Main.storyboard */ = {
@@ -983,6 +985,7 @@
 				CEA7732619927FCF0050DC11 /* ja */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CEA7732B1992801F0050DC11 /* Localizable.strings */ = {
@@ -992,6 +995,7 @@
 				CEA7732C199280230050DC11 /* ja */,
 			);
 			name = Localizable.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1001,6 +1005,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1010,13 +1015,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1029,7 +1040,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1039,6 +1050,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1048,20 +1060,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1074,14 +1091,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListCalcs/ListCalcs-Prefix.pch";
-				INFOPLIST_FILE = "ListCalcs/ListCalcs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "ListCalcs/Supporting Files/ListCalcs-Prefix.pch";
+				INFOPLIST_FILE = "ListCalcs/Supporting Files/ListCalcs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ListCalcs",
+					"$(PROJECT_DIR)/ListCalcs/AD/Admob",
+					"$(PROJECT_DIR)/ListCalcs/AD/iAd",
+					"$(PROJECT_DIR)/ListCalcs/AD/Nend",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twobo.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1c18415f-1f16-422f-a023-4c28c8344f00";
 				WRAPPER_EXTENSION = app;
@@ -1095,14 +1116,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Kota Nakatsubo (4GHE6AEY97)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListCalcs/ListCalcs-Prefix.pch";
-				INFOPLIST_FILE = "ListCalcs/ListCalcs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "ListCalcs/Supporting Files/ListCalcs-Prefix.pch";
+				INFOPLIST_FILE = "ListCalcs/Supporting Files/ListCalcs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ListCalcs",
+					"$(PROJECT_DIR)/ListCalcs/AD/Admob",
+					"$(PROJECT_DIR)/ListCalcs/AD/iAd",
+					"$(PROJECT_DIR)/ListCalcs/AD/Nend",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twobo.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1c18415f-1f16-422f-a023-4c28c8344f00";
 				WRAPPER_EXTENSION = app;
@@ -1119,12 +1144,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListCalcs/ListCalcs-Prefix.pch";
+				GCC_PREFIX_HEADER = "ListCalcs/Supporting Files/ListCalcs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ListCalcsTests/ListCalcsTests-Info.plist";
+				INFOPLIST_FILE = "ListCalcsTests/Supporting Files/ListCalcsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twobo.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1141,8 +1167,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListCalcs/ListCalcs-Prefix.pch";
-				INFOPLIST_FILE = "ListCalcsTests/ListCalcsTests-Info.plist";
+				GCC_PREFIX_HEADER = "ListCalcs/Supporting Files/ListCalcs-Prefix.pch";
+				INFOPLIST_FILE = "ListCalcsTests/Supporting Files/ListCalcsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.twobo.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
