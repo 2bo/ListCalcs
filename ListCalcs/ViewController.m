@@ -2,8 +2,8 @@
 //  ViewController.m
 //  ListCalc
 //
-//  Created by Kota_Nakatsubo on 2013/11/24.
-//  Copyright (c) 2013年 Kota_Nakatsubo. All rights reserved.
+//  Created by K.N on 2013/11/24.
+//  Copyright (c) 2013年 K.N. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -40,20 +40,18 @@
     
     /*広告枠の追加*/
     bannerView = [[GADBannerView alloc] initWithFrame:CGRectMake(0, 20, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
-    bannerView.adUnitID = @"ca-app-pub-6871882305713553/4205288629";
+    bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
     bannerView.rootViewController = self;
     [self.view addSubview:bannerView];
     
     [bannerView loadRequest:[GADRequest request]];
     
-    //GADRequest *request = [GADRequest request];
+    GADRequest *request = [GADRequest request];
     
-    /*// テスト広告のリクエストを行う。
+    // テスト広告のリクエストを行う。
     // テスト広告を表示する端末の識別子を埋め込む。
-    request.testDevices = [NSArray arrayWithObjects:
-                           @"22642F6E-2462-5500-AC38-CCC722807242",
-                           @"YOUR_DEVICE_IDENTIFIER",
-                           nil];*/	
+    request.testDevices = @[ GAD_SIMULATOR_ID ];
+    
 
 	self.calcsArray = [NSMutableArray array];
 	//NavigationBarに置くボタンの作成

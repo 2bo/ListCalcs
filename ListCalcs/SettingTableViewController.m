@@ -2,8 +2,8 @@
 //  SettingTableViewController.m
 //  ListCalc
 //
-//  Created by Kota_Nakatsubo on 2014/07/07.
-//  Copyright (c) 2014年 Kota_Nakatsubo. All rights reserved.
+//  Created by K.N on 2014/07/07.
+//  Copyright (c) 2014年 K.N. All rights reserved.
 //
 
 #import "SettingTableViewController.h"
