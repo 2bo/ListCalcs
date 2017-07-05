@@ -765,6 +765,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Kota_Nakatsubo;
 				TargetAttributes = {
+					CEA771CD199276F40050DC11 = {
+						DevelopmentTeam = 4GHE6AEY97;
+					};
 					CEA771EE199276F40050DC11 = {
 						TestTargetID = CEA771CD199276F40050DC11;
 					};
@@ -1080,6 +1083,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1c18415f-1f16-422f-a023-4c28c8344f00";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1089,7 +1093,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Kota Nakatsubo (4GHE6AEY97)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListCalcs/ListCalcs-Prefix.pch";
 				INFOPLIST_FILE = "ListCalcs/ListCalcs-Info.plist";
@@ -1100,6 +1104,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1c18415f-1f16-422f-a023-4c28c8344f00";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

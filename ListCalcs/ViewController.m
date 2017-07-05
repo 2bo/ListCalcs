@@ -53,7 +53,7 @@
     request.testDevices = [NSArray arrayWithObjects:
                            @"22642F6E-2462-5500-AC38-CCC722807242",
                            @"YOUR_DEVICE_IDENTIFIER",
-                           nil];*/
+                           nil];*/	
 
 	self.calcsArray = [NSMutableArray array];
 	//NavigationBarに置くボタンの作成
